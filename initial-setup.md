@@ -194,8 +194,6 @@ Base:  Decimal
 
 If playback still stops, soft reset the device and test again.
 
----
-
 ## 5. Lock the device when the screen is turned off
 
 ### Goal
@@ -280,7 +278,43 @@ The final values should be:
 "AutoDeviceLockEnable"=dword:00000001
 ```
 
-## 6. Optional local program archive checksums
+## 6. Adjust backlight and screen timeout
+
+If the screen turns off too quickly while reading, change the backlight timeout in the system power settings.
+
+In English, this is usually:
+
+```text
+Power
+```
+
+The icon is a **green battery**.
+
+Open:
+
+```text
+Start → Settings → All Settings → System → Power (green battery icon)
+```
+
+Look for tabs or options related to:
+
+```text
+Backlight
+Advanced
+Battery power
+External power
+```
+
+Increase the timeout values, for example:
+
+```text
+Battery power:   5 minutes
+External power: 10 minutes
+```
+
+This is useful for ebook reading, because the lock timeout setting is not the same as the backlight or power timeout.
+
+## 7. Optional local program archive checksums
 The following files were also recorded in the local Windows Mobile setup archive.
 
 These are local checksums, not official vendor checksums.
